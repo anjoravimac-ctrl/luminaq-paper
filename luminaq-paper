@@ -1,0 +1,17 @@
+# LuminaQ: A Core Language for Differentiable Programs with Verified Complexity
+
+## Abstract
+
+We present LuminaQ...
+
+## 1. Introduction
+
+Modern numerical and machine learning systems lack formal guarantees...
+
+## 2. Overview
+
+Example:
+
+```nx
+fn normalize(v: Vector[n]) -> Vector[n]
+where ||v||₂ = 1.0
