@@ -1,7 +1,6 @@
-# Benchmark Results
-
-| Metric       | Value   |
-|--------------|---------|
-| Test A      | 95ms    |
-| Test B      | 123ms   |
-| Test C      | 76ms    |
+Program,Time(ms),Verified,Complexity
+normalize,120,true,O(n)
+linear_regression,140,true,O(n)
+bad_sum_quadratic,500,false,O(n^2)
+vectors_dot,60,true,O(n)
+matrix_multiply,300,true,O(n^3)
