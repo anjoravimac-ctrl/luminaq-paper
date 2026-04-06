@@ -1,0 +1,10 @@
+def failed_o_n_squared_check(data):
+    """
+    This function demonstrates an O(n²) complexity by using a nested loop,
+    but it's designed to fail an O(n) complexity check when analyzing performance.
+    """
+    for i in data:
+        for j in data:
+            # Simulate some operation
+            _ = i + j
+    return "Completed processing"
