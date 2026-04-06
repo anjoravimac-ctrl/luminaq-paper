@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LuminaQ Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>LuminaQ Playground</h1>
+
+<textarea id="code">
+fn model(v: Vec(n)) -> Vec(n)
+where ||v||₂ = 1.0
+
+model([1,2,3])
+</textarea>
+
+<button onclick="run()">Run</button>
+
+<pre id="output"></pre>
+
+<script src="app.js"></script>
+
+</body>
+</html>
