@@ -1,0 +1,2 @@
+fn normalize(v: Vec(n)) -> Vec(n)
+where ||v||₂ = 1.0
