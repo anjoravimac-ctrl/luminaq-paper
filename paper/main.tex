@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{LuminaQ: A Core Language for Differentiable Programs with Verified Complexity}
+\author{Anonymous}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present LuminaQ, a core language for writing differentiable programs with verified complexity bounds.
+Our type system ensures that programs satisfy invariant constraints at compile-time and enforces
+algorithmic complexity specifications. We demonstrate the language on several benchmarks from machine learning.
+\end{abstract}
+
+\section{Introduction}
+
+Modern machine learning frameworks like JAX, PyTorch, and TensorFlow enable rapid development of
+numerical algorithms, but provide no guarantees about correctness or efficiency.
+
+\section{Type System}
+
+LuminaQ combines dependent types with complexity annotations to enable compile-time verification.
+
+\subsection{Base Types}
+
+\begin{align}
+\tau ::= & \text{ Real} \\
+      & \mid \text{ Vec}(n) \\
+      & \mid \tau \to \tau
+\end{align}
+
+\subsection{Refinement Types}
+
+We extend base types with refinement predicates:
+
+\begin{align}
+\sigma ::= & \{x : \tau \mid P(x)\}
+\end{align}
+
+where $P(x)$ is a logical predicate.
+
+\section{Examples}
+
+\subsection{Normalized Vectors}
+
+\begin{verbatim}
+fn model(v: Vec(n))
+  where ||v||₂ = 1.0
+  -> Vec(n)
+\end{verbatim}
+
+\subsection{Complexity Verification}
+
+\begin{verbatim}
+fn sum(v: Vec(n)) -> Real
+  complexity O(n)
+\end{verbatim}
+
+\section{Conclusion}
+
+LuminaQ provides a foundation for writing verified numerical code.
+
+\end{document}
