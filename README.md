@@ -1,3 +1,50 @@
-https://bipedal-quantum-code-lab.base44.app/Launch
-# luminaq-paper
-# LuminaQ  A core language for differentiable programs with verified complexity.  📄 Paper: [link arXiv em breve]   💻 Prototype: [link repo principal]  ## Abstract  We present LuminaQ, a core language for differentiable programs with statically verified complexity.  LuminaQ integrates a lightweight dependent type system with 
+# LuminaQ
+
+A research language for differentiable programs with verified complexity.
+
+## 🚀 Why?
+
+Modern ML code (Python + NumPy + JAX) has:
+- no correctness guarantees
+- silent bugs
+- unknown complexity
+
+LuminaQ makes programs **correct by construction**.
+
+## 🔥 Demo
+
+### Prevent invalid inputs
+
+```nx
+fn model(v: Vec(n)) -> Vec(n)
+where ||v||₂ = 1.0
+
+model([1,2,3])
+
+❌ Compile-time error: Expected normalized vector.
+```
+
+### Verify complexity
+
+```nx
+fn sum(v: Vec(n)) -> Real
+complexity O(n)
+
+❌ If implementation is O(n²), compilation fails.
+```
+
+## 🌐 Playground
+
+Open: [playground/index.html](playground/index.html)
+
+## 📄 Paper
+
+See [paper/main.tex](paper/main.tex)
+
+## ⚠️ Status
+
+Research prototype (not production-ready)
+
+## 💬 Discussion
+
+Launching on Hacker News soon.
