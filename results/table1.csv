@@ -1,0 +1,7 @@
+# Benchmark Results
+
+| Metric       | Value   |
+|--------------|---------|
+| Test A      | 95ms    |
+| Test B      | 123ms   |
+| Test C      | 76ms    |
